@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook"
+      version="5.0"
+      xml:id="OpenGL-In-Xcode"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <info>
+    <title>Setting up an OpenGL project using Apple Xcode</title>
+    <authorgroup>
+      <author>
+	<personname>
+	  <firstname>Andrew</firstname>
+	  <surname>Butcher</surname>
+	  <othername>Hoss</othername>
+	</personname>
+	<contrib>
+	  Author
+	</contrib>
+	<email>abutcher@afrolegs.com</email>
+      </author>
+
+      <author>
+	<personname>
+	  <firstname>Tim</firstname>
+	  <surname>Bielawa</surname>
+	  <othername>Shaggy</othername>
+	</personname>
+	<contrib>
+	  Transformation to DocBook
+	</contrib>
+	<email>timbielawa@gmail.com</email>
+      </author>
+    </authorgroup>
+  </info>
+
+  <chapter xml:id="Downloading">
+    <title>Downloading Xcode</title>
+
+    <para>
+      First, install Xcode using your OSX disc or download it from
+      <link
+	  xl:href="http://developer.apple.com/TOOLS/Xcode/">Apple's
+      Development site</link>.<footnote><para><link
+      xl:href="http://developer.apple.com/TOOLS/Xcode/"/></para></footnote>
+      Watch out, it's about a 700MB ISO download. You might want to
+      burn it to disk and save it when you're done.
+    </para>
+  </chapter>
+
+  <chapter xml:id="Create-The-Project">
+    <title>Creating the Project</title>
+
+    <para>
+      Fire up <command>Xcode</command>, 
+      <menuchoice>
+	<guimenu>Hard disk</guimenu>
+	<guimenuitem>Developer</guimenuitem>
+	<guimenuitem>Applications</guimenuitem>
+	<guimenuitem>Xcode</guimenuitem>
+      </menuchoice>
+    </para>
+
+    <para>
+      Create a new project
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step1.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>
+      Under Command Line Utility, choose C++ Tool and select the
+      directory in which you'll want to store your project.
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step2.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>
+      This will give you a project set up as a blank slate for you
+      to work with:
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step3.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </chapter>
+
+  <chapter xml:id="Adding-Frameworks">
+    <title>Adding Required Frameworks</title>
+
+    <para>
+      Now that we have a blank project, we need to add targets for
+      the GLUT, OpenGL, and Cocoa frameworks.  This includes all
+      of the libraries necessary for building our project.
+    </para>
+
+    <para>
+      CTRL+CLICK (Or right click) the project name in the directory
+      shown on the right, and click 
+      <menuchoice>
+	<guimenu>Add</guimenu>
+	<guimenuitem>Existing Frameworks...</guimenuitem>
+      </menuchoice>
+    </para>
+    
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step4.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>
+      In the list shown, select Cocoa Framework and then click add
+      and then add once more.
+    </para>
+    
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step5.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>
+      Repeat this process for the GLUT and OpenGL frameworks.
+    </para>
+  </chapter>
+
+  <chapter xml:id="Fixing-Library-Paths">
+    <title>Fixing the Library Paths</title>
+
+    <para>
+      Once you have added all of the relevant frameworks, you're ready
+      to inflate your <filename>main.cpp</filename> located in the
+      project.  Simply copy and paste the code from McGraw's original
+      .cpp file (<link
+      xl:href="http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp"/>)
+      into <filename>main.cpp</filename>.
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step6.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <note>
+      <para>
+	We're <emphasis>NOT</emphasis> ready to build just yet.  The
+	library locations for GLUT and OpenGL are structured slightly
+	different on Mac which means we'll have to rename the header
+	#include's within <filename>main.cpp</filename> to the
+	following.
+      </para>
+    </note>
+
+    <programlisting>
+      <![CDATA[
+#include <GLUT/glut.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+      ]]>
+    </programlisting>
+
+    <para>
+      <inlinemediaobject>
+	<imageobject>
+	  <imagedata fileref="images/build-and-go.png"/>
+	</imageobject>
+      </inlinemediaobject>
+      Now, we're ready to build the project. Simply click "Build and
+      Go," making sure to save and you're done!
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/step7.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </chapter>
+
+</book>

@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Setting up an OpenGL project using Apple Xcode</title><meta name="generator" content="DocBook XSL Stylesheets V1.73.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en"><div class="titlepage"><div><div><h1 class="title"><a name="OpenGL-In-Xcode"></a>Setting up an OpenGL project using Apple Xcode</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Andrew</span> <span class="othername">Hoss</span> <span class="surname">Butcher</span></h3><span class="contrib">
+	  Author
+	</span> <code class="email">&lt;<a class="email" href="mailto:abutcher@afrolegs.com">abutcher@afrolegs.com</a>&gt;</code></div><div class="author"><h3 class="author"><span class="firstname">Tim</span> <span class="othername">Shaggy</span> <span class="surname">Bielawa</span></h3><span class="contrib">
+	  Transformation to DocBook
+	</span> <code class="email">&lt;<a class="email" href="mailto:timbielawa@gmail.com">timbielawa@gmail.com</a>&gt;</code></div></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#Downloading">1. Downloading Xcode</a></span></dt><dt><span class="chapter"><a href="#Create-The-Project">2. Creating the Project</a></span></dt><dt><span class="chapter"><a href="#Adding-Frameworks">3. Adding Required Frameworks</a></span></dt><dt><span class="chapter"><a href="#Fixing-Library-Paths">4. Fixing the Library Paths</a></span></dt></dl></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="Downloading"></a>Chapter 1. Downloading Xcode</h2></div></div></div><p>
+      First, install Xcode using your OSX disc or download it from
+      <a class="ulink" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">Apple's
+      Development site</a>.<sup>[<a name="id1107043" href="#ftn.id1107043" class="footnote">1</a>]</sup>
+      Watch out, it's about a 700MB ISO download. You might want to
+      burn it to disk and save it when you're done.
+    </p><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a name="ftn.id1107043" href="#id1107043" class="para">1</a>] </sup><a class="ulink" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">http://developer.apple.com/TOOLS/Xcode/</a></p></div></div></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="Create-The-Project"></a>Chapter 2. Creating the Project</h2></div></div></div><p>
+      Fire up <span class="command"><strong>Xcode</strong></span>, 
+      <span class="guimenu">Hard disk</span> &#8594; <span class="guimenuitem">Developer</span> &#8594; <span class="guimenuitem">Applications</span> &#8594; <span class="guimenuitem">Xcode</span>
+    </p><p>
+      Create a new project
+    </p><div class="mediaobject"><img src="images/step1.png"></div><p>
+      Under Command Line Utility, choose C++ Tool and select the
+      directory in which you'll want to store your project.
+    </p><div class="mediaobject"><img src="images/step2.png"></div><p>
+      This will give you a project set up as a blank slate for you
+      to work with:
+    </p><div class="mediaobject"><img src="images/step3.png"></div></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="Adding-Frameworks"></a>Chapter 3. Adding Required Frameworks</h2></div></div></div><p>
+      Now that we have a blank project, we need to add targets for
+      the GLUT, OpenGL, and Cocoa frameworks.  This includes all
+      of the libraries necessary for building our project.
+    </p><p>
+      CTRL+CLICK (Or right click) the project name in the directory
+      shown on the right, and click 
+      <span class="guimenu">Add</span> &#8594; <span class="guimenuitem">Existing Frameworks...</span>
+    </p><div class="mediaobject"><img src="images/step4.png"></div><p>
+      In the list shown, select Cocoa Framework and then click add
+      and then add once more.
+    </p><div class="mediaobject"><img src="images/step5.png"></div><p>
+      Repeat this process for the GLUT and OpenGL frameworks.
+    </p></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="Fixing-Library-Paths"></a>Chapter 4. Fixing the Library Paths</h2></div></div></div><p>
+      Once you have added all of the relevant frameworks, you're ready
+      to inflate your <code class="filename">main.cpp</code> located in the
+      project.  Simply copy and paste the code from McGraw's original
+      .cpp file (<a class="ulink" href="http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp" target="_top">http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp</a>)
+      into <code class="filename">main.cpp</code>.
+    </p><div class="mediaobject"><img src="images/step6.png"></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+	We're <span class="emphasis"><em>NOT</em></span> ready to build just yet.  The
+	library locations for GLUT and OpenGL are structured slightly
+	different on Mac which means we'll have to rename the header
+	#include's within <code class="filename">main.cpp</code> to the
+	following.
+      </p></div><pre class="programlisting">
+      
+#include &lt;GLUT/glut.h&gt;
+#include &lt;OpenGL/gl.h&gt;
+#include &lt;OpenGL/glu.h&gt;
+      
+    </pre><p>
+      <span class="inlinemediaobject"><img src="images/build-and-go.png"></span>
+      Now, we're ready to build the project. Simply click "Build and
+      Go," making sure to save and you're done!
+    </p><div class="mediaobject"><img src="images/step7.png"></div></div></div></body></html>
