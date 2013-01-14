@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Setting up an OpenGL project using Apple Xcode</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<meta name="description" content="Additional Resources You may also enjoy: GitHub: OpenGL in XCode - report issues with this guide, or view the latest DocBook 5 XML source under git version control">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book">
 <div class="titlepage">
@@ -15,17 +16,35 @@
 <span class="firstname">Andrew</span> <span class="othername">Hoss</span> <span class="surname">Butcher</span>
 </h3>
 <span class="contrib">
-	  Author
-	</span> <code class="email">&lt;<a class="email" href="mailto:abutcher@afrolegs.com">abutcher@afrolegs.com</a>&gt;</code>
+          Author
+        </span> <code class="email">&lt;<a class="email" href="mailto:abutcher@afrolegs.com">abutcher@afrolegs.com</a>&gt;</code>
 </div>
 <div class="author">
 <h3 class="author">
 <span class="firstname">Tim</span> <span class="othername">Shaggy</span> <span class="surname">Bielawa</span>
 </h3>
 <span class="contrib">
-	  Transformation to DocBook
-	</span> <code class="email">&lt;<a class="email" href="mailto:timbielawa@gmail.com">timbielawa@gmail.com</a>&gt;</code>
+          Transformation to DocBook
+        </span> <code class="email">&lt;<a class="email" href="mailto:timbielawa@gmail.com">timbielawa@gmail.com</a>&gt;</code>
 </div>
+</div></div>
+<div><p class="copyright">Copyright © 2009, 2013 Andrew Butcher, Tim Bielawa</p></div>
+<div><div class="legalnotice">
+<a name="idp72640"></a><p>
+        This work is licensed under the Creative Commons Attribution
+        3.0 United States License. To view a copy of this license,
+        visit <a class="link" href="http://creativecommons.org/licenses/by/3.0/us/" target="_top">http://creativecommons.org/licenses/by/3.0/us/</a> or
+        send a letter to Creative Commons, 171 Second Street, Suite
+        300, San Francisco, California, 94105, USA.
+      </p>
+</div></div>
+<div><div class="abstract">
+<p class="title"><b>Additional Resources</b></p>
+<p>
+	You may also enjoy: <a class="link" href="https://github.com/tbielawa/opengl-in-xcode" target="_top">GitHub:
+	OpenGL in XCode</a> - report issues with this guide, or
+	view the latest DocBook 5 XML source under git version control
+      </p>
 </div></div>
 </div>
 <hr>
@@ -65,29 +84,29 @@
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Downloading-4-2-5"></a>1.1. Downloading Xcode</h2></div></div></div>
 <p>
-	Launch the App Store application, search for Xcode and then
-	click Install.
+        Launch the App Store application, search for Xcode and then
+        click Install.
       </p>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Create-The-Project-4-2-5"></a>1.2. Creating the Project</h2></div></div></div>
 <p>
-	Fire up <span class="command"><strong>Xcode</strong></span>,
-	<span class="guimenu">Hard Disk</span> &#8594; <span class="guimenuitem">Applications</span> &#8594; <span class="guimenuitem">Xcode</span>
+        Fire up <span class="command"><strong>Xcode</strong></span>,
+        <span class="guimenu">Hard Disk</span> &#8594; <span class="guimenuitem">Applications</span> &#8594; <span class="guimenuitem">Xcode</span>
       </p>
 <p>
-	Create a new project
+        Create a new project
       </p>
 <div class="mediaobject"><img src="images/4-2-5/step1.png"></div>
 <p>
-	Under Application choose Command Line Tool and name your project.
+        Under Application choose Command Line Tool and name your project.
       </p>
 <div class="mediaobject"><img src="images/4-2-5/step2.png"></div>
 <div class="mediaobject"><img src="images/4-2-5/step3.png"></div>
 <p>
-	This will give you a project set up as a blank slate for you
-	to work with:
+        This will give you a project set up as a blank slate for you
+        to work with:
       </p>
 <div class="mediaobject"><img src="images/4-2-5/step4.png"></div>
 </div>
@@ -95,32 +114,32 @@
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Adding-Frameworks-4-2-5"></a>1.3. Adding Required Frameworks</h2></div></div></div>
 <p>
-	Now that we have a blank project, we need to add targets for the
-	GLUT, OpenGL, and Cocoa frameworks.  This includes all of the
-	libraries necessary for building our project.
+        Now that we have a blank project, we need to add targets for the
+        GLUT, OpenGL, and Cocoa frameworks.  This includes all of the
+        libraries necessary for building our project.
       </p>
 <p>
-	Select the project name in the directory shown on the left, this
-	will show Project Targets in the main workspace.
+        Select the project name in the directory shown on the left, this
+        will show Project Targets in the main workspace.
       </p>
 <div class="mediaobject"><img src="images/4-2-5/step5.png"></div>
 <p>
-	Select the dropdown item for Link Binary With Libraries and
-	click the + icon to add a framework.
+        Select the dropdown item for Link Binary With Libraries and
+        click the + icon to add a framework.
       </p>
 <div class="mediaobject"><img src="images/4-2-5/step6.png"></div>
 <p>
-	Repeat this process for the GLUT and OpenGL frameworks.
-    </p>
+        Repeat this process for the GLUT and OpenGL frameworks.
+      </p>
 <div class="mediaobject"><img src="images/4-2-5/step7.png"></div>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Testing-out-some-code-4-2-5"></a>1.4. Testing Out Some Code</h2></div></div></div>
 <p>
-      Paste the following into your <code class="filename">main.cpp</code>
-      file, replacing the original contents:
-    </p>
+        Paste the following into your <code class="filename">main.cpp</code>
+        file, replacing the original contents:
+      </p>
 <pre class="screen">#ifdef WIN32
 #include &lt;windows.h&gt;
 #endif
@@ -372,9 +391,9 @@ int main (int argc, char **argv)
 }
 </pre>
 <p>
-      Create a new header file in the same directory titled
-      <code class="filename">hw5.h</code> and paste the following:
-    </p>
+        Create a new header file in the same directory titled
+        <code class="filename">hw5.h</code> and paste the following:
+      </p>
 <pre class="screen">
 const int texture_width = 256;
 const int texture_height = 256;
@@ -393,8 +412,8 @@ void generate_texture()
 
 </pre>
 <p>
-      Give it a Run and you should be presented with a fancy teapot:
-    </p>
+        Give it a Run and you should be presented with a fancy teapot:
+      </p>
 <div class="mediaobject"><img src="images/4-2-5/teapot.png"></div>
 </div>
 </div>
@@ -414,68 +433,68 @@ void generate_texture()
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Downloading"></a>2.1. Downloading Xcode</h2></div></div></div>
 <p>
-      First, install Xcode using your OSX disc or download it from
-      <a class="link" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">Apple's
-      Development site</a>.<a href="#ftn.idp111072" class="footnote"><sup class="footnote"><a name="idp111072"></a>[1]</sup></a>
-      Watch out, it's about a 700MB ISO download. You might want to
-      burn it to disk and save it when you're done.
-    </p>
+        First, install Xcode using your OSX disc or download it from
+        <a class="link" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">Apple's
+        Development site</a>.<a href="#ftn.idp103984" class="footnote"><sup class="footnote"><a name="idp103984"></a>[1]</sup></a>
+        Watch out, it's about a 700MB ISO download. You might want to
+        burn it to disk and save it when you're done.
+      </p>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Create-The-Project"></a>2.2. Creating the Project</h2></div></div></div>
 <p>
-      Fire up <span class="command"><strong>Xcode</strong></span>,
-      <span class="guimenu">Hard disk</span> &#8594; <span class="guimenuitem">Developer</span> &#8594; <span class="guimenuitem">Applications</span> &#8594; <span class="guimenuitem">Xcode</span>
-    </p>
+        Fire up <span class="command"><strong>Xcode</strong></span>,
+        <span class="guimenu">Hard disk</span> &#8594; <span class="guimenuitem">Developer</span> &#8594; <span class="guimenuitem">Applications</span> &#8594; <span class="guimenuitem">Xcode</span>
+      </p>
 <p>
-      Create a new project
-    </p>
+        Create a new project
+      </p>
 <div class="mediaobject"><img src="images/legacy/step1.png"></div>
 <p>
-      Under Command Line Utility, choose C++ Tool and select the
-      directory in which you'll want to store your project.
-    </p>
+        Under Command Line Utility, choose C++ Tool and select the
+        directory in which you'll want to store your project.
+      </p>
 <div class="mediaobject"><img src="images/legacy/step2.png"></div>
 <p>
-      This will give you a project set up as a blank slate for you
-      to work with:
-    </p>
+        This will give you a project set up as a blank slate for you
+        to work with:
+      </p>
 <div class="mediaobject"><img src="images/legacy/step3.png"></div>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Adding-Frameworks"></a>2.3. Adding Required Frameworks</h2></div></div></div>
 <p>
-      Now that we have a blank project, we need to add targets for
-      the GLUT, OpenGL, and Cocoa frameworks.  This includes all
-      of the libraries necessary for building our project.
-    </p>
+        Now that we have a blank project, we need to add targets for
+        the GLUT, OpenGL, and Cocoa frameworks.  This includes all
+        of the libraries necessary for building our project.
+      </p>
 <p>
-      CTRL+CLICK (Or right click) the project name in the directory
-      shown on the right, and click
-      <span class="guimenu">Add</span> &#8594; <span class="guimenuitem">Existing Frameworks...</span>
-    </p>
+        CTRL+CLICK (Or right click) the project name in the directory
+        shown on the right, and click
+        <span class="guimenu">Add</span> &#8594; <span class="guimenuitem">Existing Frameworks...</span>
+      </p>
 <div class="mediaobject"><img src="images/legacy/step4.png"></div>
 <p>
-      In the list shown, select Cocoa Framework and then click add
-      and then add once more.
-    </p>
+        In the list shown, select Cocoa Framework and then click add
+        and then add once more.
+      </p>
 <div class="mediaobject"><img src="images/legacy/step5.png"></div>
 <p>
-      Repeat this process for the GLUT and OpenGL frameworks.
-    </p>
+        Repeat this process for the GLUT and OpenGL frameworks.
+      </p>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="Fixing-Library-Paths"></a>2.4. Fixing the Library Paths</h2></div></div></div>
 <p>
-      Once you have added all of the relevant frameworks, you're ready
-      to inflate your <code class="filename">main.cpp</code> located in the
-      project.  Simply copy and paste the code from McGraw's original
-      .cpp file (<a class="link" href="http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp" target="_top">http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp</a>)
-      into <code class="filename">main.cpp</code>.
-    </p>
+        Once you have added all of the relevant frameworks, you're ready
+        to inflate your <code class="filename">main.cpp</code> located in the
+        project.  Simply copy and paste the code from McGraw's original
+        .cpp file (<a class="link" href="http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp" target="_top">http://csee.wvu.edu/~tmcgraw/cs470fall2009/hw1-2009.cpp</a>)
+        into <code class="filename">main.cpp</code>.
+      </p>
 <div class="mediaobject"><img src="images/legacy/step6.png"></div>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note">
 <tr>
@@ -483,30 +502,30 @@ void generate_texture()
 <th align="left">Note</th>
 </tr>
 <tr><td align="left" valign="top"><p>
-	We're <span class="emphasis"><em>NOT</em></span> ready to build just yet.  The
-	library locations for GLUT and OpenGL are structured slightly
-	different on Mac which means we'll have to rename the header
-	#include's within <code class="filename">main.cpp</code> to the
-	following.
-      </p></td></tr>
+          We're <span class="emphasis"><em>NOT</em></span> ready to build just yet.  The
+          library locations for GLUT and OpenGL are structured slightly
+          different on Mac which means we'll have to rename the header
+          #include's within <code class="filename">main.cpp</code> to the
+          following.
+        </p></td></tr>
 </table></div>
 <pre class="programlisting">
-      
-#include &lt;GLUT/glut.h&gt;
-#include &lt;OpenGL/gl.h&gt;
-#include &lt;OpenGL/glu.h&gt;
-      
-    </pre>
+        
+                 #include &lt;GLUT/glut.h&gt;
+                 #include &lt;OpenGL/gl.h&gt;
+                 #include &lt;OpenGL/glu.h&gt;
+        
+      </pre>
 <p>
-      <span class="inlinemediaobject"><img src="images/legacy/build-and-go.png"></span>
-      Now, we're ready to build the project. Simply click "Build and
-      Go," making sure to save and you're done!
-    </p>
+        <span class="inlinemediaobject"><img src="images/legacy/build-and-go.png"></span>
+        Now, we're ready to build the project. Simply click "Build and
+        Go," making sure to save and you're done!
+      </p>
 <div class="mediaobject"><img src="images/legacy/step7.png"></div>
 </div>
 <div class="footnotes">
 <br><hr style="width:100; align:left;">
-<div id="ftn.idp111072" class="footnote"><p><a href="#idp111072" class="para"><sup class="para">[1] </sup></a><a class="link" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">http://developer.apple.com/TOOLS/Xcode/</a></p></div>
+<div id="ftn.idp103984" class="footnote"><p><a href="#idp103984" class="para"><sup class="para">[1] </sup></a><a class="link" href="http://developer.apple.com/TOOLS/Xcode/" target="_top">http://developer.apple.com/TOOLS/Xcode/</a></p></div>
 </div>
 </div>
 </div></body>
