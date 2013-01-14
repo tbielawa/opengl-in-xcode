@@ -84,7 +84,6 @@ void drawScene()
 {
 	// Draw Teapot
 	glPushMatrix();
-	//glBindTexture(GL_TEXTURE_2D, teaTex);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, greenLight);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, whiteLight);
 	glMaterialf(GL_FRONT, GL_SHININESS, 25.0);
@@ -94,7 +93,6 @@ void drawScene()
 
 	// Draw Floor
 	glPushMatrix();
-	//glBindTexture(GL_TEXTURE_2D, teaTex);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, whiteLight);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, whiteLight);
 	glMaterialf(GL_FRONT, GL_SHININESS, 25.0);
@@ -115,7 +113,6 @@ void idle()
 
 void setCamera()
 {	
-  //	gluLookAt(0.0f, 0.75f, 2.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, -1.0f);
   glTranslatef(0.0f,-0.75f, -2.0f);
   glRotatef(0.0f, 0.0f, 1.0f, 0.0f);
 }

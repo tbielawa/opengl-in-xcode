@@ -40,96 +40,97 @@
 
     <section xml:id="Downloading-4-2-5">
 
+      <title>Downloading Xcode</title>
       <para>
 	Derp.
       </para>
 
     </section>
 
-  <section xml:id="Create-The-Project-4-2-5">
-    <title>Creating the Project</title>
+    <section xml:id="Create-The-Project-4-2-5">
+      <title>Creating the Project</title>
 
-    <para>
-      Fire up <command>Xcode</command>, 
-      <menuchoice>
-	<guimenu>Hard Disk</guimenu>
-	<guimenuitem>Applications</guimenuitem>
-	<guimenuitem>Xcode</guimenuitem>
-      </menuchoice>
-    </para>
+      <para>
+	Fire up <command>Xcode</command>,
+	<menuchoice>
+	  <guimenu>Hard Disk</guimenu>
+	  <guimenuitem>Applications</guimenuitem>
+	  <guimenuitem>Xcode</guimenuitem>
+	</menuchoice>
+      </para>
 
-    <para>
-      Create a new project
-    </para>
+      <para>
+	Create a new project
+      </para>
 
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step1.png"/>
-      </imageobject>
-    </mediaobject>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step1.png"/>
+	</imageobject>
+      </mediaobject>
 
-    <para>
-      Under Application choose Command Line Tool and name your project.
-    </para>
+      <para>
+	Under Application choose Command Line Tool and name your project.
+      </para>
 
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step2.png"/>
-      </imageobject>
-    </mediaobject>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step2.png"/>
+	</imageobject>
+      </mediaobject>
 
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step3.png"/>
-      </imageobject>
-    </mediaobject>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step3.png"/>
+	</imageobject>
+      </mediaobject>
 
-    <para>
-      This will give you a project set up as a blank slate for you
-      to work with:
-    </para>
+      <para>
+	This will give you a project set up as a blank slate for you
+	to work with:
+      </para>
 
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step4.png"/>
-      </imageobject>
-    </mediaobject>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step4.png"/>
+	</imageobject>
+      </mediaobject>
 
-  </section>
+    </section>
 
-  <section xml:id="Adding-Frameworks-4-2-5">
-    <title>Adding Required Frameworks</title>
+    <section xml:id="Adding-Frameworks-4-2-5">
+      <title>Adding Required Frameworks</title>
 
-    <para>
-      Now that we have a blank project, we need to add targets for the
-      GLUT, OpenGL, and Cocoa frameworks.  This includes all of the
-      libraries necessary for building our project.
-    </para>
+      <para>
+	Now that we have a blank project, we need to add targets for the
+	GLUT, OpenGL, and Cocoa frameworks.  This includes all of the
+	libraries necessary for building our project.
+      </para>
 
-    <para>
-      Select the project name in the directory shown on the left, this
-      will show Project Targets in the main workspace.
-    </para>
-    
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step5.png"/>
-      </imageobject>
-    </mediaobject>
+      <para>
+	Select the project name in the directory shown on the left, this
+	will show Project Targets in the main workspace.
+      </para>
 
-    <para>
-      Select the dropdown item for Link Binary With Libraries and
-      click the + icon to add a framework.
-    </para>
-    
-    <mediaobject>
-      <imageobject>
-	<imagedata fileref="images/4-2-5/step6.png"/>
-      </imageobject>
-    </mediaobject>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step5.png"/>
+	</imageobject>
+      </mediaobject>
 
-    <para>
-      Repeat this process for the GLUT and OpenGL frameworks.
+      <para>
+	Select the dropdown item for Link Binary With Libraries and
+	click the + icon to add a framework.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step6.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <para>
+	Repeat this process for the GLUT and OpenGL frameworks.
     </para>
 
     <mediaobject>
@@ -137,10 +138,10 @@
 	<imagedata fileref="images/4-2-5/step7.png"/>
       </imageobject>
     </mediaobject>
- 
-  </section>
 
-  <section xml:id="Testing-out-some-code-4-2-5">
+    </section>
+
+    <section xml:id="Testing-out-some-code-4-2-5">
 
     <title>Testing Out Some Code</title>
 
@@ -148,15 +149,25 @@
       Paste the following into your <filename>main.cpp</filename>
       file, replacing the original contents:
     </para>
-    
+
     <screen><xi:include href="../examples/main.cpp" parse="text"/></screen>
-    
+
     <para>
       Create a new header file in the same directory titled
       <filename>hw5.h</filename> and paste the following:
     </para>
 
     <screen><xi:include href="../examples/hw5.h" parse="text"/></screen>
+
+    <para>
+      Give it a Run and you should be presented with a fancy teapot:
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/4-2-5/teapot.png"/>
+      </imageobject>
+    </mediaobject>
 
   </section>
 
@@ -238,13 +249,13 @@
 
     <para>
       CTRL+CLICK (Or right click) the project name in the directory
-      shown on the right, and click 
+      shown on the right, and click
       <menuchoice>
 	<guimenu>Add</guimenu>
 	<guimenuitem>Existing Frameworks...</guimenuitem>
       </menuchoice>
     </para>
-    
+
     <mediaobject>
       <imageobject>
 	<imagedata fileref="images/legacy/step4.png"/>
@@ -255,7 +266,7 @@
       In the list shown, select Cocoa Framework and then click add
       and then add once more.
     </para>
-    
+
     <mediaobject>
       <imageobject>
 	<imagedata fileref="images/legacy/step5.png"/>

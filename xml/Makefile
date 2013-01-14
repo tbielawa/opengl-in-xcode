@@ -1,4 +1,4 @@
 #!/usr/bin/make
 
 html:
-	xsltproc -o ../index.html /usr/share/xml/docbook/stylesheet/nwalsh/html/docbook.xsl ogl-xcode.xml
+	xsltproc --xinclude -o ../index.html /opt/local/share/xsl/docbook-xsl/xhtml-1_1/docbook.xsl ogl-xcode.xml
