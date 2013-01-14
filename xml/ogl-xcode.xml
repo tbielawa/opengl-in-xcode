@@ -34,7 +34,150 @@
     </authorgroup>
   </info>
 
-  <chapter xml:id="Downloading">
+  <chapter xml:id="Xcode-4-2-5">
+
+    <title>Xcode 4.2.5</title>
+
+    <section xml:id="Downloading-4-2-5">
+
+      <title>Downloading Xcode</title>
+      <para>
+	Derp.
+      </para>
+
+    </section>
+
+    <section xml:id="Create-The-Project-4-2-5">
+      <title>Creating the Project</title>
+
+      <para>
+	Fire up <command>Xcode</command>,
+	<menuchoice>
+	  <guimenu>Hard Disk</guimenu>
+	  <guimenuitem>Applications</guimenuitem>
+	  <guimenuitem>Xcode</guimenuitem>
+	</menuchoice>
+      </para>
+
+      <para>
+	Create a new project
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step1.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <para>
+	Under Application choose Command Line Tool and name your project.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step2.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step3.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <para>
+	This will give you a project set up as a blank slate for you
+	to work with:
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step4.png"/>
+	</imageobject>
+      </mediaobject>
+
+    </section>
+
+    <section xml:id="Adding-Frameworks-4-2-5">
+      <title>Adding Required Frameworks</title>
+
+      <para>
+	Now that we have a blank project, we need to add targets for the
+	GLUT, OpenGL, and Cocoa frameworks.  This includes all of the
+	libraries necessary for building our project.
+      </para>
+
+      <para>
+	Select the project name in the directory shown on the left, this
+	will show Project Targets in the main workspace.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step5.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <para>
+	Select the dropdown item for Link Binary With Libraries and
+	click the + icon to add a framework.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/4-2-5/step6.png"/>
+	</imageobject>
+      </mediaobject>
+
+      <para>
+	Repeat this process for the GLUT and OpenGL frameworks.
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/4-2-5/step7.png"/>
+      </imageobject>
+    </mediaobject>
+
+    </section>
+
+    <section xml:id="Testing-out-some-code-4-2-5">
+
+    <title>Testing Out Some Code</title>
+
+    <para>
+      Paste the following into your <filename>main.cpp</filename>
+      file, replacing the original contents:
+    </para>
+
+    <screen><xi:include href="../examples/main.cpp" parse="text"/></screen>
+
+    <para>
+      Create a new header file in the same directory titled
+      <filename>hw5.h</filename> and paste the following:
+    </para>
+
+    <screen><xi:include href="../examples/hw5.h" parse="text"/></screen>
+
+    <para>
+      Give it a Run and you should be presented with a fancy teapot:
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/4-2-5/teapot.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </section>
+
+  </chapter>
+
+  <chapter xml:id="Legacy">
+
+    <title>Legacy Guide</title>
+
+  <section xml:id="Downloading">
     <title>Downloading Xcode</title>
 
     <para>
@@ -46,13 +189,13 @@
       Watch out, it's about a 700MB ISO download. You might want to
       burn it to disk and save it when you're done.
     </para>
-  </chapter>
+  </section>
 
-  <chapter xml:id="Create-The-Project">
+  <section xml:id="Create-The-Project">
     <title>Creating the Project</title>
 
     <para>
-      Fire up <command>Xcode</command>, 
+      Fire up <command>Xcode</command>,
       <menuchoice>
 	<guimenu>Hard disk</guimenu>
 	<guimenuitem>Developer</guimenuitem>
@@ -67,7 +210,7 @@
 
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step1.png"/>
+	<imagedata fileref="images/legacy/step1.png"/>
       </imageobject>
     </mediaobject>
 
@@ -78,7 +221,7 @@
 
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step2.png"/>
+	<imagedata fileref="images/legacy/step2.png"/>
       </imageobject>
     </mediaobject>
 
@@ -89,13 +232,13 @@
 
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step3.png"/>
+	<imagedata fileref="images/legacy/step3.png"/>
       </imageobject>
     </mediaobject>
 
-  </chapter>
+  </section>
 
-  <chapter xml:id="Adding-Frameworks">
+  <section xml:id="Adding-Frameworks">
     <title>Adding Required Frameworks</title>
 
     <para>
@@ -106,16 +249,16 @@
 
     <para>
       CTRL+CLICK (Or right click) the project name in the directory
-      shown on the right, and click 
+      shown on the right, and click
       <menuchoice>
 	<guimenu>Add</guimenu>
 	<guimenuitem>Existing Frameworks...</guimenuitem>
       </menuchoice>
     </para>
-    
+
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step4.png"/>
+	<imagedata fileref="images/legacy/step4.png"/>
       </imageobject>
     </mediaobject>
 
@@ -123,19 +266,19 @@
       In the list shown, select Cocoa Framework and then click add
       and then add once more.
     </para>
-    
+
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step5.png"/>
+	<imagedata fileref="images/legacy/step5.png"/>
       </imageobject>
     </mediaobject>
 
     <para>
       Repeat this process for the GLUT and OpenGL frameworks.
     </para>
-  </chapter>
+  </section>
 
-  <chapter xml:id="Fixing-Library-Paths">
+  <section xml:id="Fixing-Library-Paths">
     <title>Fixing the Library Paths</title>
 
     <para>
@@ -149,7 +292,7 @@
 
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step6.png"/>
+	<imagedata fileref="images/legacy/step6.png"/>
       </imageobject>
     </mediaobject>
 
@@ -174,7 +317,7 @@
     <para>
       <inlinemediaobject>
 	<imageobject>
-	  <imagedata fileref="images/build-and-go.png"/>
+	  <imagedata fileref="images/legacy/build-and-go.png"/>
 	</imageobject>
       </inlinemediaobject>
       Now, we're ready to build the project. Simply click "Build and
@@ -183,9 +326,11 @@
 
     <mediaobject>
       <imageobject>
-	<imagedata fileref="images/step7.png"/>
+	<imagedata fileref="images/legacy/step7.png"/>
       </imageobject>
     </mediaobject>
+
+  </section>
 
   </chapter>
 
